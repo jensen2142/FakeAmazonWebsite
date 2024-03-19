@@ -2,6 +2,6 @@
 {
     public interface IAmazonRepository
     {
-        public IQueryable<Project> Projects { get; }
+        public IQueryable<Books> Books { get; }
     }
 }

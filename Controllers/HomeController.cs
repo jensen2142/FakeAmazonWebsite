@@ -20,7 +20,7 @@ namespace Mission11_Hermansen.Controllers
             int pageSize = 10;
             var blah = new ProjectsListViewModel
             {
-                Projects = _repo.Projects
+                Books = _repo.Books
                .OrderBy(x => x.BookID)
                .Skip((pageNum - 1) * pageSize)
                .Take(pageSize),
@@ -29,7 +29,7 @@ namespace Mission11_Hermansen.Controllers
                 {
                     CurrentPage = pageNum,
                     ItemsPerPage = pageSize,
-                    TotalItmes = _repo.Projects.Count()
+                    TotalItmes = _repo.Books.Count()
                 }
             };
             return View(blah);

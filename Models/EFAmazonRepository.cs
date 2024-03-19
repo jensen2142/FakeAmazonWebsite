@@ -8,6 +8,6 @@ namespace Mission11_Hermansen.Models
         {
             _context = temp;
         }
-        public IQueryable<Project> Projects => _context.Projects;
+        public IQueryable<Books> Books => _context.Books;
     }
 }

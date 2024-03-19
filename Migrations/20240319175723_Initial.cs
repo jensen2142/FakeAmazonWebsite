@@ -11,7 +11,7 @@ namespace Mission11_Hermansen.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Projects",
+                name: "Books",
                 columns: table => new
                 {
                     BookID = table.Column<int>(type: "INTEGER", nullable: false)
@@ -20,8 +20,8 @@ namespace Mission11_Hermansen.Migrations
                     Author = table.Column<string>(type: "TEXT", nullable: false),
                     Publisher = table.Column<string>(type: "TEXT", nullable: false),
                     ISBN = table.Column<string>(type: "TEXT", nullable: false),
-                    ClassificationOrCategory = table.Column<string>(type: "TEXT", nullable: false),
-                    NumberOfPages = table.Column<int>(type: "INTEGER", nullable: false),
+                    Classification = table.Column<string>(type: "TEXT", nullable: false),
+                    PageCount = table.Column<int>(type: "INTEGER", nullable: false),
                     Price = table.Column<decimal>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>

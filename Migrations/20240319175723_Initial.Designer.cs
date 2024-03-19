@@ -10,7 +10,7 @@ using Mission11_Hermansen.Models;
 namespace Mission11_Hermansen.Migrations
 {
     [DbContext(typeof(AmazonContext))]
-    [Migration("20240319154218_Initial")]
+    [Migration("20240319175723_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -19,7 +19,7 @@ namespace Mission11_Hermansen.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.3");
 
-            modelBuilder.Entity("Mission11_Hermansen.Models.Project", b =>
+            modelBuilder.Entity("Mission11_Hermansen.Models.Books", b =>
                 {
                     b.Property<int>("BookID")
                         .ValueGeneratedOnAdd()
@@ -29,7 +29,7 @@ namespace Mission11_Hermansen.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ClassificationOrCategory")
+                    b.Property<string>("Classification")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -37,7 +37,7 @@ namespace Mission11_Hermansen.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("NumberOfPages")
+                    b.Property<int>("PageCount")
                         .HasColumnType("INTEGER");
 
                     b.Property<decimal>("Price")
